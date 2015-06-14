@@ -68,8 +68,7 @@ $ ->
     updateMap()
 
     # new L.TileLayer.Stamen({user: 'concierge', style: 'watercolor'}).addTo(map)
-    # new L.TileLayer.MapBox({user: 'concierge', map: 'gjdmmp09'}).addTo(map)
-    new L.TileLayer.Stamen({user: 'concierge', style: 'toner'}).addTo(map)
+    new L.TileLayer.MapBox({user: 'concierge', map: 'gjdmmp09'}).addTo(map)
 
     if localStorage.getItem('myLocation')
       current_location = _.map(localStorage.current_location.split(','), (item) -> return parseFloat(item))
