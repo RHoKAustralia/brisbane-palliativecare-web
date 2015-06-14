@@ -7,7 +7,7 @@ class PublicSearchesController < SavedSearchesController
   end
 
   def create
-    @saved_search = SavedSearch.new(name: params[:q])
+    @saved_search = SavedSearch.new(params[:saved_search].slice("name").to_h)
     @results = SimpleSearch.new(@saved_search.name).results
     render :show
   end
