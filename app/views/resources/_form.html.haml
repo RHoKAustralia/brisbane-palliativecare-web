@@ -60,3 +60,9 @@
 
   .submit
     = f.submit 'Save'
+%script{type:"text/javascript", src:"https://maps.googleapis.com/maps/api/js?libraries=places"}
+%script
+  var ac1=new google.maps.places.Autocomplete(document.getElementById("address_street1"), {"types":["address"]});
+  //var ac2=new google.maps.places.Autocomplete(document.getElementById("address_suburb"), {"types":["administrative_area_level_2"]});
+  //var ac3=new google.maps.places.Autocomplete(document.getElementById("address_state"), {"types":["administrative_area_level_1"]});
+  //var ac4=new google.maps.places.Autocomplete(document.getElementById("address_state"), {"types":["country"]});
