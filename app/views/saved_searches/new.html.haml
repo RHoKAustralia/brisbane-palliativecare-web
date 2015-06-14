@@ -1,4 +1,38 @@
-= content_for :title, 'Search'
+= content_for :title, 'Get the help you need'
 = content_for :title_icon, 'icon-search3'
+
+%p
+  This page is designed to help you get the care you and your family need.
+  %br
+  You can either choose a stage on our timeline or search for specific results
+
+%p What stage along the palliative care timeline best describes where you are currently.
+
+.timeline
+  .grid-of-three
+    .one-of-three-wrapper
+      .one-of-three.card
+        = link_to '#' do
+          %h4 Early Diagnosis
+          %p
+            At the time of diagnosis or quite soon after.
+
+    .one-of-three-wrapper
+      .one-of-three.card
+        = link_to '#' do
+          %h4 Needing Help
+          %p
+            When starting to need help with your normal activities.
+
+    .one-of-three-wrapper
+      .one-of-three.card
+        = link_to '#' do
+          %h4 Last Stage Care
+          %p
+            Getting towards the end, needing much more help.
+
+    .clearfix
+    %center
+      %img{ src: '/assets/timeline.svg' }
 
 = render 'form', saved_search: @saved_search, tags_by_category: @tags_by_category

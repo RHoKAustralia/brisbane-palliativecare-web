@@ -1,7 +1,6 @@
 = form_for @saved_search, url: "/#{controller_name}" do |f|
   .field
-    = f.label :name, "Search query / reference"
-    = f.text_field :name, placeholder: "term", autofocus: true
-
+    = f.label :name, "I am trying to find", class: 'hidden'
+    = f.text_field :name, placeholder: "I am looking for", autofocus: true, class: 'extra-padding'
   .submit
-    %button.icon-search3{ type: 'submit' } Search
+    %button.icon-search3{ class: 'extra-padding', type: 'submit' } Search
