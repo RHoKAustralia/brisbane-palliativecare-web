@@ -13,6 +13,11 @@
     = f.label :public
     = f.check_box :public
 
+  - if current_user && current_user.admin?
+    .field
+      = f.label :admin
+      = f.check_box :admin
+
     = fields_for :address, @address do |a|
       .field
         = a.label :street1, 'Street'
