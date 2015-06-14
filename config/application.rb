@@ -13,7 +13,7 @@ module Concierge
     I18n.config.enforce_available_locales = true
     config.assets.initialize_on_precompile = false # for heroku
     config.autoload_paths += %W(#{config.root}/lib)
-    config.time_zone = 'Brisbane'
+    config.time_zone = Settings.timezone
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
   end
 end
