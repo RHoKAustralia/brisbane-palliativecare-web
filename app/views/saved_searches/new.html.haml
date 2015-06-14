@@ -12,7 +12,7 @@
   .grid-of-three
     .one-of-three-wrapper
       .one-of-three.card
-        = link_to '#' do
+        = link_to '' do
           %h4 Early Diagnosis
           %p
             At the time of diagnosis or quite soon after.
@@ -33,6 +33,6 @@
 
     .clearfix
     %center
-      %img{ src: '/assets/timeline.svg' }
+      = image_tag("timeline.svg")
 
 = render 'form', saved_search: @saved_search, tags_by_category: @tags_by_category
